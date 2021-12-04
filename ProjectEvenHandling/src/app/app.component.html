@@ -1,0 +1,15 @@
+<h1>Обработка событий</h1>
+<hr>
+<button (click)="showContacts2()">Show Contacts List</button>
+
+<button on-click="showContacts2()">
+  Show Contacts List
+</button>
+
+<button on-click="showContacts($event)">
+  Show Contacts List
+</button>
+
+<hr>
+<h2>Пользовательские Angular события</h2>
+<app-contacts></app-contacts>
