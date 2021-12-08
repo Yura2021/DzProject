@@ -6,8 +6,8 @@ import { Component, OnInit,Input, Output,EventEmitter} from '@angular/core';
   styleUrls: ['./contacts-item.component.scss']
 })
 export class ContactsItemComponent implements OnInit {
-  @Input() name: string = 'Unknown';
-  @Output() nameChange = new EventEmitter<String>();
+  @Input('name') public name:any;
+  @Output() public nameChange = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
