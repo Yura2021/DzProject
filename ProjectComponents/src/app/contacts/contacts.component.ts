@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.scss'],
-/*   template: `
-    <contacts-item [(name)]="contactPerson"></contacts-item>
-    <p>{{ contactPerson }}</p>
-  `, */
+  styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
   public contactPerson= "undefined";
