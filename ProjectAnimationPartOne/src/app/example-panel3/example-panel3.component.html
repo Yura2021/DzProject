@@ -1,0 +1,7 @@
+<div
+  [@openClose]="isOpen ? 'open' : 'closed'"
+  (@openClose.start)="onAnimationEvent($event)"
+  (@openClose.done)="onAnimationEvent($event)"
+  class="open-close-container"
+></div>
+<button type="submit"(click)="onClick()">Enter</button>

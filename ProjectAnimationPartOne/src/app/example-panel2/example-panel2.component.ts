@@ -18,10 +18,12 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class ExamplePanel2Component implements OnInit {
-
+  isVisible=true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+onClick(){
+  this.isVisible=!this.isVisible;
+}
 }
