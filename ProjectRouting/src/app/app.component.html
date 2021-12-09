@@ -1,14 +1,17 @@
 <h1>Маршрутизация</h1>
 
-<!-- <nav>
-  <a routerLink="/info" routerLinkActive="active"> Departments</a>
-</nav> -->
-<hr>
 <div class="wrapper">
   <app-nav></app-nav>
-
   <main>
-    <router-outlet></router-outlet>
+    <div class="row">
+      <div class="col-9">
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="col-3">
+        <router-outlet name="discount"></router-outlet>
+      </div>
+    </div>
   </main>
 
   <app-footer></app-footer>

@@ -1,21 +1,36 @@
 <ul>
   <li>
-    <a routerLink="/home" routerLinkActive="active-link"
-      >Home</a
-    >
+    <a routerLink="/info" routerLinkActive="active"> Departments</a>
   </li>
   <li>
-    <a
-      routerLink="/home/profile"
-      routerLinkActive="active-link"
-      >Profile</a
-    >
+    <a routerLink="/home" routerLinkActive="active-link">Home</a>
+  </li>
+
+  <li>
+    <a routerLink="/home/profile" routerLinkActive="active-link">Profile</a>
   </li>
   <li>
-    <a
-      routerLink="/contacts/director"
-      routerLinkActive="active-link"
+    <a routerLink="/home/director" routerLinkActive="active-link"
       >Director contacts</a
+    >
+  </li>
+  <li>
+    <hr />
+    <h2>Маршруты с параметрами</h2>
+    <a [routerLink]="['home/profile', 3]">Profile</a>
+    <br />
+    <a [routerLink]="['home/profile']" [queryParams]="{ id: 3 }">Profile</a>
+    <br />
+    <a [routerLink]="['home/profile']" [fragment]="address">Profile</a>
+  </li>
+
+  <li>
+    <hr />
+    <h2>Множественная маршрутизация (named outlets)</h2>
+    <a [routerLink]="[{ outlets: { discount: null } }]">Hide discount</a>
+    <br />
+    <a [routerLink]="[{ outlets: { discount: 'discount-info' } }]"
+      >Show discount</a
     >
   </li>
 </ul>

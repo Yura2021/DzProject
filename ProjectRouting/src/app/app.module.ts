@@ -11,6 +11,9 @@ import { DirectorContactsRouteComponent } from './director-contacts-route/direct
 import { NgbAlertModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { DiscountInfoComponent } from './discount-info/discount-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { FooterComponent } from './footer/footer.component';
     ProfileRouteComponent,
     DirectorContactsRouteComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    ProfileComponent,
+    DiscountInfoComponent
   ],
   imports: [
     BrowserModule,
