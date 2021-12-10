@@ -7,20 +7,26 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
   styleUrls: ['./department-detail.component.scss']
 })
 export class DepartmentDetailComponent implements OnInit {
-public departmentId:any;
-  constructor(private route:ActivatedRoute,private router:Router) { }
+  public departmentId: any;
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params:ParamMap|any)=>{
-      this.departmentId=parseInt(params.get('id'));
+    this.route.paramMap.subscribe((params: ParamMap | any) => {
+      this.departmentId = parseInt(params.get('id'));
     })
   }
-  goPrevious(){
-    let previousId=this.departmentId-1;
-    this.router.navigate(['/departments',previousId]);
+  goPrevious() {
+    let previousId = this.departmentId - 1;
+    this.router.navigate(['/departments', previousId]);
   }
-  goNext(){
-    let nextId=this.departmentId+1;
-    this.router.navigate(['/departments',nextId]);
+  goNext() {
+    let nextId = this.departmentId + 1;
+    this.router.navigate(['/departments', nextId]);
+  }
+  showOverview() {
+    this.router.navigate(['overview'], { relativeTo: this.route });
+  }
+  showContact() {
+    this.router.navigate(['contact'], { relativeTo: this.route });
   }
 }
