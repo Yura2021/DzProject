@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import HelloW from "./components/HelloW";
 import Welcome01 from "./components/Welcome01";
