@@ -1,8 +1,8 @@
 import React from "react";
 class Comp01 extends React.Component {
   constructor(props) {
-      super(props);
-    this.state = { value: '' };
+    super(props);
+    this.state = { value: "" };
     this.handleChange = this.handleChange.bind(this);
     this.handleSabmit = this.handleSabmit.bind(this);
   }
@@ -30,4 +30,4 @@ class Comp01 extends React.Component {
     );
   }
 }
-export default Comp01
+export default Comp01;

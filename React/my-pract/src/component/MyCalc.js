@@ -4,19 +4,24 @@ class MyCalc extends React.Component {
   constructor() {
     super();
     this.state = {
-      sum: 0
+      sum: 0,
     };
   }
   Sum() {
-    let sum1 = this.funCalc(document.getElementById('a').value, document.getElementById('op').value,document.getElementById('b').value);
-    alert(sum1);
+    let sum1 = this.funCalc(
+      document.getElementById("a").value,
+      document.getElementById("op").value,
+      document.getElementById("b").value
+    );
     this.setState({
-      sum: sum1
+      sum: sum1,
     });
   }
 
-  funCalc(a, op, b) {
-    let sum = 0;
+  funCalc(a1, op, b1) {
+    let a = parseInt(a1);
+    let b = parseInt(b1);
+    let sum;
     switch (op) {
       case "+":
         sum = a + b;
@@ -44,11 +49,7 @@ class MyCalc extends React.Component {
         <input type="number" id="a" />
         <input type="text" id="op" />
         <input type="number" id="b" />
-        <button
-          onClick={() => this.Sum()}
-        >
-          Sum
-        </button>
+        <button onClick={() => this.Sum()}>Sum</button>
       </div>
     );
   }

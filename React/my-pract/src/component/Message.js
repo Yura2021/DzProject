@@ -4,15 +4,15 @@ class myClass extends React.Component {
   constructor() {
     super();
     this.www = {
-      message: "Welcome2"
+      message: "Welcome2",
     };
     this.state = {
-      message: "Welcome1"
+      message: "Welcome1",
     };
   }
   ChangeMessage() {
     this.setState({
-      message: "Bye"
+      message: "Bye",
     });
   }
   render() {
@@ -20,7 +20,7 @@ class myClass extends React.Component {
       <div>
         <h1>{this.state.message}</h1>
         <h1>{this.www.message}</h1>
-        <button onClick = {()=>this.ChangeMessage()}>Subscribe</button>
+        <button onClick={() => this.ChangeMessage()}>Subscribe</button>
       </div>
     );
   }
